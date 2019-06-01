@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AJAX Task2</title>
+<link  href="ajax2.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<button onclick="myfunction()">Display</button>
+<h1>Name :</h1>
+<p1 id="2"></p1>
+<h1>Born :</h1>
+<p1 id="3"></p1>
+<h1>Culture :</h1>
+<p1 id="4"></p1>
+<h1>Tiltes :</h1>
+<p1 id="5"></p1>
+<h1>Played By :<h1>
+<p1 id="6"></p1>
+<script>
+function myfunction(){
+
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET','https://anapioficeandfire.com/api/characters/583',true);
+			xhr.onload = function(){
+				if(this.status==200){
+					var s = JSON.parse(this.responseText);
+					document.getElementById('2').innerHTML=s.name;
+					document.getElementById('3').innerHTML=s.born;
+					document.getElementById('4').innerHTML=s.culture;
+					document.getElementById('5').innerHTML=s.titles;
+					document.getElementById('6').innerHTML=s.playedBy;
+				}
+			}
+			xhr.send();
+		}
+</script>
+</body>
+</html>

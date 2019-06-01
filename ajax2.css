@@ -1,0 +1,16 @@
+body{
+	background: url(https://previews.123rf.com/images/alexeyboldin/alexeyboldin1804/alexeyboldin180400019/100080456-holographic-neon-background-abstract-blurred-holographic-wallpaper-background-.jpg);
+	background-repeat;no-repeat;
+	background-size:cover; 
+	}
+			button{
+				border-radius: 1.5rem;
+				border:none;
+				width : 120px;
+				background: #ff9800;
+				font-weight:600;
+				color: #555;
+				margin-top: 50px;
+				margin-left: 700px;
+				padding : 10px; 
+			}
